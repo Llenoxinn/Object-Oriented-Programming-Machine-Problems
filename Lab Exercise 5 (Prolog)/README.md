@@ -1,47 +1,60 @@
-# Lab Exercise 5: List Relations
+# Lab Exercise 5 (Prolog) — List Relations with CLP(FD)
 
-Create a Prolog knowledge base (a `.pl` file) that models the following predicates (logical relations) on lists.
+A Prolog module implementing foundational list relations using SWI-Prolog's Constraint Logic Programming over Finite Domains (`library(clpfd)`).
 
-You may rename the variables in the predicates to suit your definitions.
+## Contents
+
+- [`e5.pl`](e5.pl) — Declarative list predicates backed by CLP(FD) arithmetic constraints.
 
 ## Predicates
 
-| Predicate                | True if and only if...                                          | Notes |
-| ------------------------ | --------------------------------------------------------------- | ----- |
-| `emptylist(L)`           | `L` is an empty list.                                           |       |
-| `list_last(L, E)`        | `E` is the last element of `L`.                                 |       |
-| `list_member(L, E)`      | `E` is an element of `L`.                                       |       |
-| `list_sum(L, N)`         | The sum of the elements of `L` is `N`.                          | Assume all elements of `L` are integers. |
-| `list_upperbound(L, N)`  | The integer `N` is greater than or equal to every element of `L`. | Assume all elements of `L` are integers. An empty list is upperbounded by any integer. |
-| `list_max(L, N)`         | `N` is the maximum value in `L`.                                | Assume all elements of `L` are integers. |
-| `list_subset(L, M)`      | Every element of list `M` is also a member of `L`.              | An empty list is a subset of any list. |
+| Predicate | Relation | Implementation Notes |
+| --- | --- | --- |
+| `list_length(L, N)` | `N` is the number of elements in `L`. | Uses `#=` so length constraints work declaratively. |
+| `emptylist(L)` | `L` is `[]`. | Direct unification fact. |
+| `list_last(L, E)` | `E` is the final element of `L`. | Recursively traverses to the singleton tail `[E]`. |
+| `list_member(L, E)` | `E` occurs in `L`. | Matches the head or recurses into the tail. |
+| `list_sum(L, N)` | `N` is the sum of integer elements in `L`. | Accumulates with `#=`; base case `list_sum([], 0)`. |
+| `list_upperbound(L, N)` | Integer `N` is `>=` every element in `L`. | Constrains `N #>= Head` recursively; empty list constrains `N in inf..sup`. |
+| `list_max(L, N)` | `N` is the maximum integer in non-empty list `L`. | Uses `max/2` with `#=`; fails on `[]`. |
+| `list_subset(L, M)` | Every element of `M` is a member of `L`. | Empty list `[]` is a subset of any list; checks elements via `list_member/2`. |
 
-## Examples
+## Design Notes
 
-These show the intended behavior, not required output formatting.
+Using `library(clpfd)` (`#=`, `#>=`, `in inf..sup`) instead of `is/2` keeps integer predicates more relational—constraints can propagate even when arguments are partially instantiated.
+
+## Running in SWI-Prolog
+
+```bash
+swipl e5.pl
+```
+
+Sample session:
 
 ```prolog
+?- list_length([10, 20, 30, 40], N).
+N = 4.
+
 ?- emptylist([]).
 true.
 
-?- list_last([1,2,3], E).
-E = 3.
+?- list_last([x, y, z], E).
+E = z.
 
-?- list_member([a,b,c], b).
+?- list_member([4, 8, 15, 16], 15).
+true ;
+false.
+
+?- list_sum([5, 10, 15], S).
+S = 30.
+
+?- list_upperbound([2, 9, 4], 10).
 true.
 
-?- list_sum([1,2,3], N).
-N = 6.
+?- list_max([7, 2, 11, 4], M).
+M = 11.
 
-?- list_upperbound([1,5,3], 5).
-true.
-
-?- list_max([1,5,3], N).
-N = 5.
-
-?- list_subset([1,2,3], [3,1]).
-true.
-
-?- list_subset([1,2,3], []).
-true.
+?- list_subset([10, 20, 30, 40], [40, 10]).
+true ;
+false.
 ```

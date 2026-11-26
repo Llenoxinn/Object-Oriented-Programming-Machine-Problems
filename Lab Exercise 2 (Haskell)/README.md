@@ -1,56 +1,61 @@
-# Lab Exercise 2: Exploring Haskell
+# Lab Exercise 2 (Haskell) — Pure, Recursive & Higher-Order Functions
 
-We've discussed functional programming paradigms using Haskell as a representative language. In this exercise you'll practice writing **pure functions** in Haskell.
+A Haskell module (`LE2`) practicing pure functions, recursion without mutable state, and first-class function composition.
 
-Create a Haskell file (`.hs`) containing the functions below.
+## Contents
 
-## Submission notes
+- [`e2.hs`](e2.hs) — Defines `module LE2` with arithmetic, recursive, and higher-order integer functions.
 
-- Keep the module header `module LE2 where` at the top of the file.
-- Do not rename the file.
-- Every function must use exactly the type signature given.
+## Functions
 
-## Easy functions
+### Basic Arithmetic
 
-| Function | Signature | Description |
-| -------- | --------- | ----------- |
-| `cube`   | `Int -> Int` | Returns the cube of the given integer. |
-| `double` | `Int -> Int` | Returns 2 times the given integer. |
+| Function | Signature | Behavior |
+| --- | --- | --- |
+| `cube` | `Int -> Int` | Returns `x * x * x`. |
+| `double` | `Int -> Int` | Returns `2 * x`. |
 
-## Recursive functions
+### Recursive Operations
 
-| Function          | Signature            | Description |
-| ----------------- | -------------------- | ----------- |
-| `modulus`         | `Int -> Int -> Int`  | Takes two integers `x` and `m` and returns `x mod m`. **Do not use Haskell's built-in `mod`.** |
-| `largestPowerOf2` | `Int -> Int`         | Takes a positive integer and returns the largest power of 2 that is less than or equal to it. |
-| `factorial`       | `Int -> Int`         | Returns the factorial of the given integer. |
-| `summation`       | `Int -> Int`         | Takes a natural number `n` and returns the sum of the numbers from 1 to `n`, i.e. `1 + 2 + ... + n`. |
+| Function | Signature | Behavior |
+| --- | --- | --- |
+| `modulus` | `Int -> Int -> Int` | Computes remainder via repeated subtraction (`x - y` until `x < y`), without using `mod`. |
+| `factorial` | `Int -> Int` | Recursively computes `n!` with base case `factorial 0 = 1`. |
+| `largestPowerOf2` | `Int -> Int` | Recursively halves `n` (`div 2`) to return the greatest power of `2` less than or equal to `n`. |
 
-## Higher-order functions
+### Higher-Order Functions
 
-| Function        | Signature                                     | Description |
-| --------------- | --------------------------------------------- | ----------- |
-| `compose`       | `(Int -> Int) -> (Int -> Int) -> (Int -> Int)` | Takes two functions `f` and `g` (each from integers to integers) and returns their composition `f ∘ g`, i.e. the function `\x -> f (g x)`. |
-| `subtractMaker` | `Int -> (Int -> Int)`                          | Takes an integer `x` and returns a function that takes an integer `y` and returns `x - y`. |
-| `applyNTimes`   | `(Int -> Int) -> Int -> Int -> Int`            | Takes a function `f` and two integers `n` and `x`, and returns the result of applying `f` to `x` a total of `n` times. If `n <= 0`, `f` is applied zero times and `x` is returned unchanged. |
+| Function | Signature | Behavior |
+| --- | --- | --- |
+| `compose` | `(Int -> Int) -> (Int -> Int) -> (Int -> Int)` | Returns `\x -> f (g x)` for two integer functions `f` and `g`. |
+| `subtractMaker` | `Int -> (Int -> Int)` | Given `x`, returns a closure `\y -> y - x` that subtracts `x` from its input. |
+| `applyNTimes` | `(Int -> Int) -> Int -> Int -> Int` | Applies `f` to `x` iteratively `n` times; returns `x` unchanged when `n <= 0`. |
 
-### Examples
+## Running in GHCi
 
-```haskell
-cube 3                           -- 27
-double 21                        -- 42
-modulus 17 5                     -- 2
-largestPowerOf2 100              -- 64
-factorial 5                      -- 120
-summation 10                     -- 55
-compose (+1) (*2) 5              -- 11  (that is, (+1) ((*2) 5))
-subtractMaker 10 3               -- 7   (that is, 10 - 3)
-applyNTimes (*2) 3 1             -- 8
-applyNTimes (*2) 0 7             -- 7
+Load the module interactively with `ghci`:
+
+```bash
+ghci e2.hs
 ```
 
-## Assessment criteria
+Sample session:
 
-| Criterion                          | Points |
-| ---------------------------------- | -----: |
-| Completeness of Haskell functions  |     40 |
+```haskell
+ghci> cube 4
+64
+ghci> double 15
+30
+ghci> modulus 23 6
+5
+ghci> factorial 6
+720
+ghci> largestPowerOf2 50
+32
+ghci> compose (*3) (+2) 4
+18
+ghci> subtractMaker 5 12
+7
+ghci> applyNTimes (+3) 4 1
+13
+```

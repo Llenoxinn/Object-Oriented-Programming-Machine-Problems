@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1975pt" height="947pt"
+ viewBox="0.00 0.00 1975.10 946.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(28.8 917.8)">
+<title>UML</title>
+<polygon fill="white" stroke="transparent" points="-28.8,28.8 -28.8,-917.8 1946.3,-917.8 1946.3,28.8 -28.8,28.8"/>
+<g id="node1" class="node">
+<title>Outcome</title>
+<polygon fill="white" stroke="transparent" points="695,-479 695,-567 954,-567 954,-479 695,-479"/>
+<polygon fill="#cfedee" stroke="transparent" points="696.5,-530 696.5,-566 953.5,-566 953.5,-530 696.5,-530"/>
+<text text-anchor="start" x="779.5" y="-553" font-family="DejaVu Sans" font-size="10.00">«sealed interface»</text>
+<text text-anchor="start" x="789.5" y="-539.8" font-family="DejaVu Sans" font-weight="bold" font-style="italic" font-size="14.00">Outcome</text>
+<text text-anchor="start" x="701.5" y="-518" font-family="DejaVu Sans Mono" font-size="10.00">+ succeeded: Boolean</text>
+<text text-anchor="start" x="701.5" y="-508" font-family="DejaVu Sans Mono" font-size="10.00">+ message: String</text>
+<text text-anchor="start" x="701.5" y="-498" font-family="DejaVu Sans Mono" text-decoration="underline" font-size="10.00">+ Outcome.onSuccess(action) &#160;&#160;{extension}</text>
+<text text-anchor="start" x="701.5" y="-488" font-family="DejaVu Sans Mono" text-decoration="underline" font-size="10.00">+ Outcome.onFailure(action) &#160;&#160;{extension}</text>
+<polygon fill="black" stroke="black" points="695.5,-530 695.5,-530 954.5,-530 954.5,-530 695.5,-530"/>
+<polygon fill="none" stroke="black" points="695,-479 695,-567 954,-567 954,-479 695,-479"/>
+</g>
+<g id="node2" class="node">
+<title>Success</title>
+<polygon fill="white" stroke="transparent" points="686,-309.5 686,-368.5 855,-368.5 855,-309.5 686,-309.5"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="687.5,-331 687.5,-367 854.5,-367 854.5,-331 687.5,-331"/>
+<text text-anchor="start" x="740" y="-354" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="701.5" y="-340.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Outcome.Success</text>
+<text text-anchor="start" x="692.5" y="-318" font-family="DejaVu Sans Mono" font-size="10.00">+ transaction: Transaction</text>
+<polygon fill="black" stroke="black" points="686.5,-331 686.5,-331 855.5,-331 855.5,-331 686.5,-331"/>
+<polygon fill="none" stroke="black" points="686,-309.5 686,-368.5 855,-368.5 855,-309.5 686,-309.5"/>
+</g>
+<g id="edge1" class="edge">
+<title>Outcome&#45;&gt;Success</title>
+<path fill="none" stroke="#333333" d="M809.02,-469.83C799.26,-436.93 787.03,-395.7 779,-368.64"/>
+<polygon fill="none" stroke="#333333" points="806.12,-471.14 811.7,-478.87 812.16,-469.34 806.12,-471.14"/>
+</g>
+<g id="node3" class="node">
+<title>Failure</title>
+<polygon fill="white" stroke="transparent" points="880,-309.5 880,-368.5 1025,-368.5 1025,-309.5 880,-309.5"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="881.5,-331 881.5,-367 1024.5,-367 1024.5,-331 881.5,-331"/>
+<text text-anchor="start" x="922" y="-354" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="888" y="-340.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Outcome.Failure</text>
+<text text-anchor="start" x="886.5" y="-318" font-family="DejaVu Sans Mono" font-size="10.00">+ rejection: Rejection</text>
+<polygon fill="black" stroke="black" points="880.5,-331 880.5,-331 1025.5,-331 1025.5,-331 880.5,-331"/>
+<polygon fill="none" stroke="black" points="880,-309.5 880,-368.5 1025,-368.5 1025,-309.5 880,-309.5"/>
+</g>
+<g id="edge2" class="edge">
+<title>Outcome&#45;&gt;Failure</title>
+<path fill="none" stroke="#333333" d="M860.3,-471.09C883.58,-437.99 913.08,-396.05 932.35,-368.64"/>
+<polygon fill="none" stroke="#333333" points="857.44,-469.69 854.83,-478.87 862.59,-473.32 857.44,-469.69"/>
+</g>
+<g id="node4" class="node">
+<title>Rejection</title>
+<polygon fill="white" stroke="transparent" points="895,-141.5 895,-200.5 1010,-200.5 1010,-141.5 895,-141.5"/>
+<polygon fill="#cfedee" stroke="transparent" points="896.5,-163 896.5,-199 1009.5,-199 1009.5,-163 896.5,-163"/>
+<text text-anchor="start" x="907.5" y="-186" font-family="DejaVu Sans" font-size="10.00">«sealed interface»</text>
+<text text-anchor="start" x="916.5" y="-172.8" font-family="DejaVu Sans" font-weight="bold" font-style="italic" font-size="14.00">Rejection</text>
+<text text-anchor="start" x="901.5" y="-150" font-family="DejaVu Sans Mono" font-size="10.00">+ message: String</text>
+<polygon fill="black" stroke="black" points="895.5,-163 895.5,-163 1010.5,-163 1010.5,-163 895.5,-163"/>
+<polygon fill="none" stroke="black" points="895,-141.5 895,-200.5 1010,-200.5 1010,-141.5 895,-141.5"/>
+</g>
+<g id="edge13" class="edge">
+<title>Failure&#45;&gt;Rejection</title>
+<path fill="none" stroke="#333333" d="M952.5,-309.46C952.5,-281.91 952.5,-240.02 952.5,-209.72"/>
+<polygon fill="#333333" stroke="#333333" points="952.5,-200.72 956.55,-209.72 952.5,-205.22 952.5,-209.72 952.5,-209.72 952.5,-209.72 952.5,-205.22 948.45,-209.72 952.5,-200.72 952.5,-200.72"/>
+<text text-anchor="middle" x="977" y="-236" font-family="DejaVu Sans" font-size="10.00"> &#160;rejection</text>
+</g>
+<g id="node5" class="node">
+<title>InvalidAmount</title>
+<polygon fill="white" stroke="transparent" points="0,-11 0,-70 207,-70 207,-11 0,-11"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1.5,-32.5 1.5,-68.5 206.5,-68.5 206.5,-32.5 1.5,-32.5"/>
+<text text-anchor="start" x="73" y="-55.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="7.5" y="-42.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.InvalidAmount</text>
+<text text-anchor="start" x="6.5" y="-19.5" font-family="DejaVu Sans Mono" font-size="10.00">+ amount: Money</text>
+<polygon fill="black" stroke="black" points="0.5,-32.5 0.5,-32.5 207.5,-32.5 207.5,-32.5 0.5,-32.5"/>
+<polygon fill="none" stroke="black" points="0,-11 0,-70 207,-70 207,-11 0,-11"/>
+</g>
+<g id="edge3" class="edge">
+<title>Rejection&#45;&gt;InvalidAmount</title>
+<path fill="none" stroke="#333333" d="M885.72,-166.53C755.93,-158.78 461.15,-136.18 219.5,-81 206.54,-78.04 192.99,-74.17 179.92,-70.01"/>
+<polygon fill="none" stroke="#333333" points="885.61,-169.68 894.78,-167.07 885.98,-163.39 885.61,-169.68"/>
+</g>
+<g id="node6" class="node">
+<title>AccountInactive</title>
+<polygon fill="white" stroke="transparent" points="232,0 232,-81 451,-81 451,0 232,0"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="233.5,-43.5 233.5,-79.5 450.5,-79.5 450.5,-43.5 233.5,-43.5"/>
+<text text-anchor="start" x="311" y="-66.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="239.5" y="-53.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.AccountInactive</text>
+<text text-anchor="start" x="238.5" y="-30.5" font-family="DejaVu Sans Mono" font-size="10.00">+ account: String</text>
+<text text-anchor="start" x="238.5" y="-19.5" font-family="DejaVu Sans Mono" font-size="10.00">+ action: String</text>
+<text text-anchor="start" x="238.5" y="-8.5" font-family="DejaVu Sans Mono" font-size="10.00">+ reason: String</text>
+<polygon fill="black" stroke="black" points="232.5,-43.5 232.5,-43.5 451.5,-43.5 451.5,-43.5 232.5,-43.5"/>
+<polygon fill="none" stroke="black" points="232,0 232,-81 451,-81 451,0 232,0"/>
+</g>
+<g id="edge4" class="edge">
+<title>Rejection&#45;&gt;AccountInactive</title>
+<path fill="none" stroke="#333333" d="M885.57,-160.71C790.82,-146.9 612.51,-118.51 463.5,-81 459.4,-79.97 455.23,-78.87 451.04,-77.72"/>
+<polygon fill="none" stroke="#333333" points="885.4,-163.86 894.75,-162.04 886.3,-157.63 885.4,-163.86"/>
+</g>
+<g id="node7" class="node">
+<title>NotSupported</title>
+<polygon fill="white" stroke="transparent" points="476.5,-5.5 476.5,-75.5 680.5,-75.5 680.5,-5.5 476.5,-5.5"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="477.5,-38.5 477.5,-74.5 679.5,-74.5 679.5,-38.5 477.5,-38.5"/>
+<text text-anchor="start" x="547.5" y="-61.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="483.5" y="-48.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.NotSupported</text>
+<text text-anchor="start" x="482.5" y="-25.5" font-family="DejaVu Sans Mono" font-size="10.00">+ accountType: String</text>
+<text text-anchor="start" x="482.5" y="-14.5" font-family="DejaVu Sans Mono" font-size="10.00">+ action: String</text>
+<polygon fill="black" stroke="black" points="476.5,-38.5 476.5,-38.5 680.5,-38.5 680.5,-38.5 476.5,-38.5"/>
+<polygon fill="none" stroke="black" points="476.5,-5.5 476.5,-75.5 680.5,-75.5 680.5,-5.5 476.5,-5.5"/>
+</g>
+<g id="edge5" class="edge">
+<title>Rejection&#45;&gt;NotSupported</title>
+<path fill="none" stroke="#333333" d="M886.35,-147.43C833.78,-129.48 758.41,-103.7 692.5,-81 687.35,-79.23 682.07,-77.41 676.74,-75.57"/>
+<polygon fill="none" stroke="#333333" points="885.37,-150.43 894.91,-150.35 887.41,-144.46 885.37,-150.43"/>
+</g>
+<g id="node8" class="node">
+<title>InsufficientFunds</title>
+<polygon fill="white" stroke="transparent" points="705.5,-5.5 705.5,-75.5 933.5,-75.5 933.5,-5.5 705.5,-5.5"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="706.5,-38.5 706.5,-74.5 932.5,-74.5 932.5,-38.5 706.5,-38.5"/>
+<text text-anchor="start" x="788.5" y="-61.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="712.5" y="-48.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.InsufficientFunds</text>
+<text text-anchor="start" x="711.5" y="-25.5" font-family="DejaVu Sans Mono" font-size="10.00">+ requested: Money</text>
+<text text-anchor="start" x="711.5" y="-14.5" font-family="DejaVu Sans Mono" font-size="10.00">+ available: Money</text>
+<polygon fill="black" stroke="black" points="705.5,-38.5 705.5,-38.5 933.5,-38.5 933.5,-38.5 705.5,-38.5"/>
+<polygon fill="none" stroke="black" points="705.5,-5.5 705.5,-75.5 933.5,-75.5 933.5,-5.5 705.5,-5.5"/>
+</g>
+<g id="edge6" class="edge">
+<title>Rejection&#45;&gt;InsufficientFunds</title>
+<path fill="none" stroke="#333333" d="M916.18,-134.91C897.17,-116.54 873.98,-94.14 855.08,-75.88"/>
+<polygon fill="none" stroke="#333333" points="914.32,-137.49 922.98,-141.48 918.7,-132.96 914.32,-137.49"/>
+</g>
+<g id="node9" class="node">
+<title>CreditLimitExceeded</title>
+<polygon fill="white" stroke="transparent" points="958.5,0 958.5,-81 1214.5,-81 1214.5,0 958.5,0"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="959.5,-43.5 959.5,-79.5 1213.5,-79.5 1213.5,-43.5 959.5,-43.5"/>
+<text text-anchor="start" x="1055.5" y="-66.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="965.5" y="-53.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.CreditLimitExceeded</text>
+<text text-anchor="start" x="964.5" y="-30.5" font-family="DejaVu Sans Mono" font-size="10.00">+ requested: Money</text>
+<text text-anchor="start" x="964.5" y="-19.5" font-family="DejaVu Sans Mono" font-size="10.00">+ availableCredit: Money</text>
+<text text-anchor="start" x="964.5" y="-8.5" font-family="DejaVu Sans Mono" font-size="10.00">+ limit: Money</text>
+<polygon fill="black" stroke="black" points="958.5,-43.5 958.5,-43.5 1214.5,-43.5 1214.5,-43.5 958.5,-43.5"/>
+<polygon fill="none" stroke="black" points="958.5,0 958.5,-81 1214.5,-81 1214.5,0 958.5,0"/>
+</g>
+<g id="edge7" class="edge">
+<title>Rejection&#45;&gt;CreditLimitExceeded</title>
+<path fill="none" stroke="#333333" d="M988.96,-135.04C1006.33,-118.38 1027.19,-98.37 1045.16,-81.15"/>
+<polygon fill="none" stroke="#333333" points="986.55,-132.98 982.24,-141.48 990.92,-137.53 986.55,-132.98"/>
+</g>
+<g id="node10" class="node">
+<title>Overpayment</title>
+<polygon fill="white" stroke="transparent" points="1240,-5.5 1240,-75.5 1439,-75.5 1439,-5.5 1240,-5.5"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1241.5,-38.5 1241.5,-74.5 1438.5,-74.5 1438.5,-38.5 1241.5,-38.5"/>
+<text text-anchor="start" x="1309" y="-61.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="1247.5" y="-48.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.Overpayment</text>
+<text text-anchor="start" x="1246.5" y="-25.5" font-family="DejaVu Sans Mono" font-size="10.00">+ payment: Money</text>
+<text text-anchor="start" x="1246.5" y="-14.5" font-family="DejaVu Sans Mono" font-size="10.00">+ owed: Money</text>
+<polygon fill="black" stroke="black" points="1240.5,-38.5 1240.5,-38.5 1439.5,-38.5 1439.5,-38.5 1240.5,-38.5"/>
+<polygon fill="none" stroke="black" points="1240,-5.5 1240,-75.5 1439,-75.5 1439,-5.5 1240,-5.5"/>
+</g>
+<g id="edge8" class="edge">
+<title>Rejection&#45;&gt;Overpayment</title>
+<path fill="none" stroke="#333333" d="M1018.86,-147.48C1030.4,-143.62 1042.29,-139.67 1053.5,-136 1130.18,-110.91 1149.97,-106.54 1226.5,-81 1231.82,-79.22 1237.28,-77.38 1242.78,-75.51"/>
+<polygon fill="none" stroke="#333333" points="1017.66,-144.56 1010.13,-150.41 1019.66,-150.54 1017.66,-144.56"/>
+</g>
+<g id="node11" class="node">
+<title>SameAccount</title>
+<polygon fill="white" stroke="transparent" points="1464.5,-11 1464.5,-70 1664.5,-70 1664.5,-11 1464.5,-11"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1465.5,-32.5 1465.5,-68.5 1663.5,-68.5 1663.5,-32.5 1465.5,-32.5"/>
+<text text-anchor="start" x="1533.5" y="-55.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="1471.5" y="-42.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.SameAccount</text>
+<text text-anchor="start" x="1470.5" y="-19.5" font-family="DejaVu Sans Mono" font-size="10.00">+ account: String</text>
+<polygon fill="black" stroke="black" points="1464.5,-32.5 1464.5,-32.5 1664.5,-32.5 1664.5,-32.5 1464.5,-32.5"/>
+<polygon fill="none" stroke="black" points="1464.5,-11 1464.5,-70 1664.5,-70 1664.5,-11 1464.5,-11"/>
+</g>
+<g id="edge9" class="edge">
+<title>Rejection&#45;&gt;SameAccount</title>
+<path fill="none" stroke="#333333" d="M1018.84,-145.71C1030.29,-142.08 1042.16,-138.67 1053.5,-136 1227.33,-95.11 1277.91,-122.89 1451.5,-81 1463.92,-78 1476.9,-74.16 1489.45,-70.06"/>
+<polygon fill="none" stroke="#333333" points="1017.77,-142.74 1010.18,-148.51 1019.71,-148.74 1017.77,-142.74"/>
+</g>
+<g id="node12" class="node">
+<title>UnknownAccount</title>
+<polygon fill="white" stroke="transparent" points="1689.5,-11 1689.5,-70 1917.5,-70 1917.5,-11 1689.5,-11"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1690.5,-32.5 1690.5,-68.5 1916.5,-68.5 1916.5,-32.5 1690.5,-32.5"/>
+<text text-anchor="start" x="1772.5" y="-55.5" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="1696.5" y="-42.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Rejection.UnknownAccount</text>
+<text text-anchor="start" x="1695.5" y="-19.5" font-family="DejaVu Sans Mono" font-size="10.00">+ number: String</text>
+<polygon fill="black" stroke="black" points="1689.5,-32.5 1689.5,-32.5 1917.5,-32.5 1917.5,-32.5 1689.5,-32.5"/>
+<polygon fill="none" stroke="black" points="1689.5,-11 1689.5,-70 1917.5,-70 1917.5,-11 1689.5,-11"/>
+</g>
+<g id="edge10" class="edge">
+<title>Rejection&#45;&gt;UnknownAccount</title>
+<path fill="none" stroke="#333333" d="M1018.73,-145.23C1030.2,-141.65 1042.1,-138.39 1053.5,-136 1189.75,-107.48 1540.96,-108.09 1677.5,-81 1691.89,-78.14 1706.96,-74.25 1721.47,-70.01"/>
+<polygon fill="none" stroke="#333333" points="1017.67,-142.26 1010.06,-148.01 1019.6,-148.26 1017.67,-142.26"/>
+</g>
+<g id="node13" class="node">
+<title>AccountEvent</title>
+<polygon fill="white" stroke="transparent" points="1131,-304 1131,-374 1282,-374 1282,-304 1131,-304"/>
+<polygon fill="#cfedee" stroke="transparent" points="1132.5,-337 1132.5,-373 1281.5,-373 1281.5,-337 1132.5,-337"/>
+<text text-anchor="start" x="1161.5" y="-360" font-family="DejaVu Sans" font-size="10.00">«sealed interface»</text>
+<text text-anchor="start" x="1152.5" y="-346.8" font-family="DejaVu Sans" font-weight="bold" font-style="italic" font-size="14.00">AccountEvent</text>
+<text text-anchor="start" x="1137.5" y="-324" font-family="DejaVu Sans Mono" font-size="10.00">+ accountNumber: String</text>
+<text text-anchor="start" x="1137.5" y="-313" font-family="DejaVu Sans Mono" font-size="10.00">+ message: String</text>
+<polygon fill="black" stroke="black" points="1131.5,-337 1131.5,-337 1282.5,-337 1282.5,-337 1131.5,-337"/>
+<polygon fill="none" stroke="black" points="1131,-304 1131,-374 1282,-374 1282,-304 1131,-304"/>
+</g>
+<g id="node14" class="node">
+<title>StatusChanged</title>
+<polygon fill="white" stroke="transparent" points="1066.5,-136 1066.5,-206 1314.5,-206 1314.5,-136 1066.5,-136"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1067.5,-169 1067.5,-205 1313.5,-205 1313.5,-169 1067.5,-169"/>
+<text text-anchor="start" x="1159.5" y="-192" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="1073.5" y="-178.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">AccountEvent.StatusChanged</text>
+<text text-anchor="start" x="1072.5" y="-156" font-family="DejaVu Sans Mono" font-size="10.00">+ from: Status</text>
+<text text-anchor="start" x="1072.5" y="-145" font-family="DejaVu Sans Mono" font-size="10.00">+ to: Status</text>
+<polygon fill="black" stroke="black" points="1066.5,-169 1066.5,-169 1314.5,-169 1314.5,-169 1066.5,-169"/>
+<polygon fill="none" stroke="black" points="1066.5,-136 1066.5,-206 1314.5,-206 1314.5,-136 1066.5,-136"/>
+</g>
+<g id="edge11" class="edge">
+<title>AccountEvent&#45;&gt;StatusChanged</title>
+<path fill="none" stroke="#333333" d="M1202.31,-294.55C1199.65,-266.93 1196.25,-231.67 1193.78,-206.07"/>
+<polygon fill="none" stroke="#333333" points="1199.19,-294.95 1203.18,-303.6 1205.46,-294.34 1199.19,-294.95"/>
+</g>
+<g id="node15" class="node">
+<title>InterestPosted</title>
+<polygon fill="white" stroke="transparent" points="1339.5,-141.5 1339.5,-200.5 1585.5,-200.5 1585.5,-141.5 1339.5,-141.5"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1340.5,-163 1340.5,-199 1584.5,-199 1584.5,-163 1340.5,-163"/>
+<text text-anchor="start" x="1431.5" y="-186" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="1346.5" y="-172.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">AccountEvent.InterestPosted</text>
+<text text-anchor="start" x="1345.5" y="-150" font-family="DejaVu Sans Mono" font-size="10.00">+ amount: Money</text>
+<polygon fill="black" stroke="black" points="1339.5,-163 1339.5,-163 1585.5,-163 1585.5,-163 1339.5,-163"/>
+<polygon fill="none" stroke="black" points="1339.5,-141.5 1339.5,-200.5 1585.5,-200.5 1585.5,-141.5 1339.5,-141.5"/>
+</g>
+<g id="edge12" class="edge">
+<title>AccountEvent&#45;&gt;InterestPosted</title>
+<path fill="none" stroke="#333333" d="M1266.83,-298.88C1313.32,-268.73 1376.52,-227.76 1418.36,-200.62"/>
+<polygon fill="none" stroke="#333333" points="1265.07,-296.27 1259.23,-303.81 1268.5,-301.55 1265.07,-296.27"/>
+</g>
+<g id="node16" class="node">
+<title>AccountListener</title>
+<polygon fill="white" stroke="transparent" points="979,-493.5 979,-552.5 1172,-552.5 1172,-493.5 979,-493.5"/>
+<polygon fill="#fff0c2" stroke="transparent" points="980.5,-515 980.5,-551 1171.5,-551 1171.5,-515 980.5,-515"/>
+<text text-anchor="start" x="1038.5" y="-538" font-family="DejaVu Sans" font-size="10.00">«fun interface»</text>
+<text text-anchor="start" x="1012" y="-524.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">AccountListener</text>
+<text text-anchor="start" x="985.5" y="-502" font-family="DejaVu Sans Mono" font-size="10.00">+ onEvent(event: AccountEvent)</text>
+<polygon fill="black" stroke="black" points="979.5,-515 979.5,-515 1172.5,-515 1172.5,-515 979.5,-515"/>
+<polygon fill="none" stroke="black" points="979,-493.5 979,-552.5 1172,-552.5 1172,-493.5 979,-493.5"/>
+</g>
+<g id="edge16" class="edge">
+<title>AccountListener&#45;&gt;AccountEvent</title>
+<path fill="none" stroke="#333333" stroke-dasharray="5,2" d="M1096.26,-493.16C1117.85,-463.16 1151.88,-415.88 1176.42,-381.78"/>
+<polygon fill="#333333" stroke="#333333" points="1181.82,-374.29 1179.85,-383.96 1179.19,-377.94 1176.56,-381.59 1176.56,-381.59 1176.56,-381.59 1179.19,-377.94 1173.28,-379.23 1181.82,-374.29 1181.82,-374.29"/>
+<text text-anchor="middle" x="1161.5" y="-437" font-family="DejaVu Sans" font-size="10.00"> &#160;receives</text>
+</g>
+<g id="node17" class="node">
+<title>MonthlyReport</title>
+<polygon fill="white" stroke="transparent" points="1323,-472 1323,-574 1576,-574 1576,-472 1323,-472"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1324.5,-537 1324.5,-573 1575.5,-573 1575.5,-537 1324.5,-537"/>
+<text text-anchor="start" x="1419" y="-560" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="1391" y="-546.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">MonthlyReport</text>
+<text text-anchor="start" x="1329.5" y="-524" font-family="DejaVu Sans Mono" font-size="10.00">+ month: Int</text>
+<text text-anchor="start" x="1329.5" y="-513" font-family="DejaVu Sans Mono" font-size="10.00">+ results: List&lt;MonthlyResult&gt;</text>
+<text text-anchor="start" x="1329.5" y="-502" font-family="DejaVu Sans Mono" font-size="10.00">+ statusChanges: List&lt;MonthlyResult&gt;</text>
+<text text-anchor="start" x="1329.5" y="-481" font-family="DejaVu Sans Mono" font-size="10.00">+ toString(): String &#160;&#160;(formatted table)</text>
+<polygon fill="black" stroke="black" points="1323.5,-537 1323.5,-537 1576.5,-537 1576.5,-537 1323.5,-537"/>
+<polygon fill="black" stroke="black" points="1323.5,-494 1323.5,-494 1576.5,-494 1576.5,-494 1323.5,-494"/>
+<polygon fill="none" stroke="black" points="1323,-472 1323,-574 1576,-574 1576,-472 1323,-472"/>
+</g>
+<g id="node18" class="node">
+<title>MonthlyResult</title>
+<polygon fill="white" stroke="transparent" points="1371,-271 1371,-407 1528,-407 1528,-271 1371,-271"/>
+<polygon fill="#f7e3c6" stroke="transparent" points="1372.5,-370 1372.5,-406 1527.5,-406 1527.5,-370 1372.5,-370"/>
+<text text-anchor="start" x="1419" y="-393" font-family="DejaVu Sans" font-size="10.00">«data class»</text>
+<text text-anchor="start" x="1393" y="-379.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">MonthlyResult</text>
+<text text-anchor="start" x="1377.5" y="-357" font-family="DejaVu Sans Mono" font-size="10.00">+ accountNumber: String</text>
+<text text-anchor="start" x="1377.5" y="-346" font-family="DejaVu Sans Mono" font-size="10.00">+ owner: String</text>
+<text text-anchor="start" x="1377.5" y="-335" font-family="DejaVu Sans Mono" font-size="10.00">+ type: String</text>
+<text text-anchor="start" x="1377.5" y="-324" font-family="DejaVu Sans Mono" font-size="10.00">+ interest: Money</text>
+<text text-anchor="start" x="1377.5" y="-313" font-family="DejaVu Sans Mono" font-size="10.00">+ statusBefore: Status</text>
+<text text-anchor="start" x="1377.5" y="-302" font-family="DejaVu Sans Mono" font-size="10.00">+ statusAfter: Status</text>
+<text text-anchor="start" x="1377.5" y="-291" font-family="DejaVu Sans Mono" font-size="10.00">+ balanceAfter: Money</text>
+<text text-anchor="start" x="1377.5" y="-280" font-family="DejaVu Sans Mono" font-size="10.00">+ statusChanged: Boolean</text>
+<polygon fill="black" stroke="black" points="1371.5,-370 1371.5,-370 1528.5,-370 1528.5,-370 1371.5,-370"/>
+<polygon fill="none" stroke="black" points="1371,-271 1371,-407 1528,-407 1528,-271 1371,-271"/>
+</g>
+<g id="edge20" class="edge">
+<title>MonthlyReport&#45;&gt;MonthlyResult</title>
+<path fill="none" stroke="#333333" d="M1449.5,-460.72C1449.5,-443.48 1449.5,-424.65 1449.5,-407.09"/>
+<polygon fill="#333333" stroke="#333333" points="1449.5,-460.99 1453.1,-466.39 1449.5,-471.79 1445.9,-466.39 1449.5,-460.99"/>
+<text text-anchor="middle" x="1457.95" y="-422.72" font-family="DejaVu Sans" font-size="10.00">0..*</text>
+<text text-anchor="middle" x="1441.05" y="-451.16" font-family="DejaVu Sans" font-size="10.00">1</text>
+</g>
+<g id="node19" class="node">
+<title>BankShell</title>
+<polygon fill="white" stroke="transparent" points="1120,-763 1120,-889 1325,-889 1325,-763 1120,-763"/>
+<polygon fill="#ddf0d8" stroke="transparent" points="1121.5,-861 1121.5,-888 1324.5,-888 1324.5,-861 1121.5,-861"/>
+<text text-anchor="start" x="1184" y="-871.8" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">BankShell</text>
+<text text-anchor="start" x="1126.5" y="-848" font-family="DejaVu Sans Mono" font-size="10.00">&#45; bank: Bank</text>
+<text text-anchor="start" x="1126.5" y="-827" font-family="DejaVu Sans Mono" font-size="10.00">+ execute(line: String): String</text>
+<text text-anchor="start" x="1126.5" y="-816" font-family="DejaVu Sans Mono" font-size="10.00">+ run() &#160;&#160;(read&#45;eval&#45;print loop)</text>
+<text text-anchor="start" x="1126.5" y="-805" font-family="DejaVu Sans Mono" font-size="10.00">&#45; open(args): String</text>
+<text text-anchor="start" x="1126.5" y="-794" font-family="DejaVu Sans Mono" font-size="10.00">&#45; project(args): String</text>
+<text text-anchor="start" x="1126.5" y="-783" font-family="DejaVu Sans Mono" font-size="10.00">&#45; payoff(args): String</text>
+<text text-anchor="start" x="1126.5" y="-772" font-family="DejaVu Sans Mono" font-size="10.00">&#45; tokenize(line): List&lt;String&gt;</text>
+<polygon fill="black" stroke="black" points="1120.5,-861 1120.5,-861 1325.5,-861 1325.5,-861 1120.5,-861"/>
+<polygon fill="black" stroke="black" points="1120.5,-840 1120.5,-840 1325.5,-840 1325.5,-840 1120.5,-840"/>
+<polygon fill="none" stroke="black" points="1120,-763 1120,-889 1325,-889 1325,-763 1120,-763"/>
+</g>
+<g id="node20" class="node">
+<title>Bank</title>
+<polygon fill="white" stroke="transparent" points="1162,-643.5 1162,-693.5 1283,-693.5 1283,-643.5 1162,-643.5"/>
+<polygon fill="#ddf0d8" stroke="transparent" points="1163.5,-665.5 1163.5,-692.5 1282.5,-692.5 1282.5,-665.5 1163.5,-665.5"/>
+<text text-anchor="start" x="1203" y="-676.3" font-family="DejaVu Sans" font-weight="bold" font-size="14.00">Bank</text>
+<text text-anchor="start" x="1168.5" y="-652.5" font-family="DejaVu Sans Mono" font-size="10.00">(see core diagram)</text>
+<polygon fill="black" stroke="black" points="1162.5,-665.5 1162.5,-665.5 1283.5,-665.5 1283.5,-665.5 1162.5,-665.5"/>
+<polygon fill="none" stroke="black" points="1162,-643.5 1162,-693.5 1283,-693.5 1283,-643.5 1162,-643.5"/>
+</g>
+<g id="edge21" class="edge">
+<title>BankShell&#45;&gt;Bank</title>
+<path fill="none" stroke="#333333" d="M1222.5,-762.65C1222.5,-742.26 1222.5,-720.4 1222.5,-702.98"/>
+<polygon fill="#333333" stroke="#333333" points="1222.5,-693.8 1226.55,-702.8 1222.5,-698.3 1222.5,-702.8 1222.5,-702.8 1222.5,-702.8 1222.5,-698.3 1218.45,-702.8 1222.5,-693.8 1222.5,-693.8"/>
+<text text-anchor="middle" x="1241" y="-728" font-family="DejaVu Sans" font-size="10.00"> &#160;drives</text>
+<text text-anchor="middle" x="1230.95" y="-709.43" font-family="DejaVu Sans" font-size="10.00">1</text>
+</g>
+<g id="edge18" class="edge">
+<title>Bank&#45;&gt;AccountEvent</title>
+<path fill="none" stroke="#333333" d="M1221.32,-643.42C1218.64,-588.42 1212.02,-452.99 1208.61,-383.17"/>
+<polygon fill="#333333" stroke="#333333" points="1208.17,-374.17 1212.65,-382.96 1208.39,-378.67 1208.61,-383.16 1208.61,-383.16 1208.61,-383.16 1208.39,-378.67 1204.56,-383.36 1208.17,-374.17 1208.17,-374.17"/>
+<text text-anchor="middle" x="1256" y="-520.5" font-family="DejaVu Sans" font-size="10.00"> &#160;eventLog &#160;0..*</text>
+</g>
+<g id="edge17" class="edge">
+<title>Bank&#45;&gt;AccountListener</title>
+<path fill="none" stroke="#333333" d="M1162.26,-643.48C1146.65,-635.21 1130.79,-624.74 1118.5,-612 1104.73,-597.72 1094.58,-578.18 1087.61,-561.14"/>
+<polygon fill="#333333" stroke="#333333" points="1084.25,-552.5 1091.28,-559.42 1085.88,-556.69 1087.51,-560.89 1087.51,-560.89 1087.51,-560.89 1085.88,-556.69 1083.73,-562.36 1084.25,-552.5 1084.25,-552.5"/>
+<text text-anchor="middle" x="1161" y="-604" font-family="DejaVu Sans" font-size="10.00"> &#160;subscribers &#160;0..*</text>
+</g>
+<g id="edge19" class="edge">
+<title>Bank&#45;&gt;MonthlyReport</title>
+<path fill="none" stroke="#333333" stroke-dasharray="5,2" d="M1260.49,-643.48C1288.3,-625.9 1327.18,-601.32 1362.45,-579.03"/>
+<polygon fill="#333333" stroke="#333333" points="1370.38,-574.01 1364.94,-582.25 1366.58,-576.42 1362.78,-578.82 1362.78,-578.82 1362.78,-578.82 1366.58,-576.42 1360.61,-575.4 1370.38,-574.01 1370.38,-574.01"/>
+<text text-anchor="middle" x="1343" y="-604" font-family="DejaVu Sans" font-size="10.00"> &#160;creates</text>
+</g>
+<g id="node21" class="node">
+<title>Account</title>
+<polygon fill="white" stroke="transparent" points="848,-639 848,-698 969,-698 969,-639 848,-639"/>
+<polygon fill="#d6e4f7" stroke="transparent" points="849.5,-660.5 849.5,-696.5 968.5,-696.5 968.5,-660.5 849.5,-660.5"/>
+<text text-anchor="start" x="869" y="-683.5" font-family="DejaVu Sans" font-size="10.00">«abstract class»</text>
+<text text-anchor="start" x="877" y="-670.3" font-family="DejaVu Sans" font-weight="bold" font-style="italic" font-size="14.00">Account</text>
+<text text-anchor="start" x="854.5" y="-647.5" font-family="DejaVu Sans Mono" font-size="10.00">(see core diagram)</text>
+<polygon fill="black" stroke="black" points="848.5,-660.5 848.5,-660.5 969.5,-660.5 969.5,-660.5 848.5,-660.5"/>
+<polygon fill="none" stroke="black" points="848,-639 848,-698 969,-698 969,-639 848,-639"/>
+</g>
+<g id="edge14" class="edge">
+<title>Account&#45;&gt;Outcome</title>
+<path fill="none" stroke="#333333" stroke-dasharray="5,2" d="M891.7,-638.81C881,-620.52 866.83,-596.32 854.27,-574.85"/>
+<polygon fill="#333333" stroke="#333333" points="849.72,-567.08 857.76,-572.8 851.99,-570.96 854.26,-574.85 854.26,-574.85 854.26,-574.85 851.99,-570.96 850.77,-576.89 849.72,-567.08 849.72,-567.08"/>
+<text text-anchor="middle" x="895" y="-604" font-family="DejaVu Sans" font-size="10.00"> &#160;returns</text>
+</g>
+<g id="edge15" class="edge">
+<title>Account&#45;&gt;AccountListener</title>
+<path fill="none" stroke="#333333" d="M941.89,-638.81C968.74,-615.73 1006.57,-583.23 1035.12,-558.7"/>
+<polygon fill="#333333" stroke="#333333" points="1042.16,-552.64 1037.98,-561.58 1038.75,-555.58 1035.34,-558.51 1035.34,-558.51 1035.34,-558.51 1038.75,-555.58 1032.7,-555.44 1042.16,-552.64 1042.16,-552.64"/>
+<text text-anchor="middle" x="1015.5" y="-604" font-family="DejaVu Sans" font-size="10.00"> &#160;notifies &#160;0..*</text>
+</g>
+</g>
+</svg>
